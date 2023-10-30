@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     EditText loginEmail , loginPassword ;
-    Button loginBtn ;
+    Button loginBtn, guestbtn ;
     TextView forgotPassword , needAnAccount ;
     FirebaseAuth auth ;
 
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         loginPassword = findViewById(R.id.login_password);
         loginBtn = findViewById(R.id.login_btn);
         forgotPassword = findViewById(R.id.forgot_password);
+        guestbtn = findViewById(R.id.guestbtn);
         needAnAccount = findViewById(R.id.need_an_account);
 
 
@@ -54,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Login(email , password);
                 }
+            }
+        });
+        guestbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,GuestActivity.class));
+
+
             }
         });
 
