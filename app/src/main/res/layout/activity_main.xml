@@ -26,16 +26,16 @@
         android:layout_height="wrap_content"/>
 
     <EditText
-        android:id="@+id/login_passord"
+        android:id="@+id/login_password"
         android:layout_below="@+id/login_email"
-        android:hint="Passowrd"
+        android:hint="Password"
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/forgot_password"
-        android:layout_below="@id/login_passord"
+        android:layout_below="@id/login_password"
         android:layout_marginTop="5dp"
         android:text="Forgot Password"
         android:layout_alignParentRight="true"
@@ -52,6 +52,8 @@
         android:layout_below="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+
 
     <TextView
         android:id="@+id/need_an_account"
