@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends AppCompatActivity {
-    EditText loginEmail , loginPassowrd ;
+    EditText loginEmail , loginPassword ;
     Button loginBtn ;
     TextView forgotPassword , needAnAccount ;
     FirebaseAuth auth ;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         loginEmail = findViewById(R.id.login_email);
-        loginPassowrd = findViewById(R.id.login_passord);
+        loginPassword = findViewById(R.id.login_password);
         loginBtn = findViewById(R.id.login_btn);
         forgotPassword = findViewById(R.id.forgot_password);
         needAnAccount = findViewById(R.id.need_an_account);
@@ -45,17 +45,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String email = loginEmail.getText().toString().trim();
-                String password = loginPassowrd.getText().toString().trim();
+                String password = loginPassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)){
                     loginEmail.setError("Email is required");
                 }else if (TextUtils.isEmpty(password)){
-                    loginPassowrd.setError("Password is required");
+                    loginPassword.setError("Password is required");
                 }else{
                     Login(email , password);
                 }
             }
         });
+
+
+
 
 
         needAnAccount.setOnClickListener(new View.OnClickListener() {
