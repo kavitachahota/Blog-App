@@ -34,7 +34,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         registerEmail = findViewById(R.id.register_email);
-        registerPassword = findViewById(R.id.register_passord);
+        registerPassword = findViewById(R.id.register_password);
         registerBtn = findViewById(R.id.register_btn);
         alreadyhaveAnAccount = findViewById(R.id.already_have_an_account);
 
