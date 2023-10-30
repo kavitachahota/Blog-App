@@ -42,9 +42,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         if(actionBar!=null){
-            actionBar.setTitle("Register");
-            actionBar.setDisplayHomeAsUpEnabled(true);
-            actionBar.setDisplayShowHomeEnabled(true);}
+        actionBar.setTitle("Register");
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(true);}
 
 
         alreadyhaveAnAccount.setOnClickListener(new View.OnClickListener() {
